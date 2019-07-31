@@ -1,0 +1,48 @@
+
+<div class="col-xs-3">
+ <h2>User info</h2>
+
+ <table class="table">
+     <tr>
+       <%= attachment_image_tag @user, :profile_image,format: 'png', fallback: "no_image.png", size: "100x100" %>
+     </tr>
+   <thead>
+     <tr>
+       <th>name</th>
+       <th><%= @user.name %></th>
+     </tr>
+     <tr>
+       <td>introduction</td>
+       <td><%= @user.introduction %></td>
+     </tr>
+   </tbody>
+ </table>
+     <p><%= link_to "edit", edit_user_path(@user.id) %></p>
+
+ <div class="row">
+   <a></a>
+ </div>
+   <h2>New book</h2>
+    <%= form_for(@bookn) do |f| %>
+
+   <div class="field row">
+    <%= f.label :title %>
+   </div>
+    <%= f.text_field :title %>
+
+   <div class="field row">
+    <%= f.label :body %>
+   </div>
+    <%= f.text_area :body %>
+
+   <div class="field row">
+    <%= f.submit %>
+   </div>
+<% end %>
+
+ <div class="actions row">
+ </div>
+ </form>
+</div>
+<div class="col-xs-9">
+	<h2>Book datail</h2>
