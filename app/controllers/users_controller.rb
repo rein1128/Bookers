@@ -9,6 +9,7 @@ class UsersController < ApplicationController
     @userk = current_user
   end
 
+
   def edit
   	@user = User.find(params[:id])
   end
